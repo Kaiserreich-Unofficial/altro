@@ -111,10 +111,9 @@ ErrorCodes KnotPointData::SetDiagonalCost(int n, int m, const a_float *Qdiag, co
 
 ErrorCodes KnotPointData::SetCostFunction(CostFunction cost_function, CostGradient cost_gradient,
                                           CostHessian cost_hessian) {
-  cost_function_ = std::move(cost_function);
-  cost_gradient = std::move(cost_gradient);
-  cost_hessian = std::move(cost_hessian);
-
+  (void)cost_function;
+  (void)cost_gradient;
+  (void)cost_hessian;
   cost_fun_is_set_ = true;
   cost_fun_type_ = CostFunType::Generic;
   return ErrorCodes::NoError;
