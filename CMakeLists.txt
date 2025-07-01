@@ -70,7 +70,7 @@ add_subdirectory(deps)
 #############################################
 
 # Output all binaries
-add_compile_options(-Wall -Wextra -pedantic -Werror -march=native)
+add_compile_options(-march=native)
 add_subdirectory(src)
 
 #############################################
